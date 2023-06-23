@@ -23,14 +23,16 @@ class _LoginPageState extends State<LoginPage> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-      // Process the login logic here
-      // For example, you can check the entered email and password
-      // against a database or authentication service
       final email = _emailController.text;
       final password = _passwordController.text;
 
-      // Perform your login logic here
+      // Process the login logic here
+      // For example, you can check the entered email and password
+      // against a database or authentication service
       // ...
+
+      // If login is successful, navigate to the student dashboard
+      Navigator.pushReplacementNamed(context, '/dashboard');
     }
   }
 
@@ -134,21 +136,27 @@ class _LoginPageState extends State<LoginPage> {
             icon: Icon(Icons.person_add),
             label: 'Register',
           ),
-        
+          BottomNavigationBarItem(
+            icon: Icon(Icons.login),
+            label: 'Login',
+          ),
         ],
-        currentIndex: 1, // Set the current index of the selected item
+       selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.white,
+        backgroundColor: Colors.blue,
+        currentIndex: 2, // Set the current index of the selected item
         onTap: (index) {
           // Handle item tap here
           if (index == 0) {
             // Navigate to home page
-            Navigator.pushNamed(context, '/');
-          } else if (index == 1) {
-            // Navigate to registration page
+            Navigator.pushNamed(context, '/');  } 
+            else if (index == 1) {
             Navigator.pushNamed(context, '/registration');
-          } else if (index == 2) {
-            // Navigate to student dashboard
-            Navigator.pushNamed(context, '/dashboard');
-          }
+          } 
+          else if (index == 2) {
+            Navigator.pushNamed(context, '/login');
+              
+          } 
         },
       ),
     );

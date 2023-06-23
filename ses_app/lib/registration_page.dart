@@ -31,14 +31,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-      // Perform form processing
       final studentID = _studentIDController.text;
       final name = _nameController.text;
       final email = _emailController.text;
       final password = _passwordController.text;
       final confirmPassword = _confirmPasswordController.text;
 
-      // Perform form validation
       if (studentID.trim().isEmpty) {
         setState(() {
           _error = 'Please enter your Student ID.';
@@ -70,8 +68,11 @@ class _RegistrationPageState extends State<RegistrationPage> {
         return;
       }
 
-      // If the form is valid, perform data processing
+      // If the form is valid and all checks pass, you can proceed with registration logic here
       // ...
+
+      // Registration successful, navigate to login page
+      Navigator.pushReplacementNamed(context, '/login');
     }
   }
 
@@ -84,6 +85,13 @@ class _RegistrationPageState extends State<RegistrationPage> {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(16.0),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.grey, Colors.white],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
           child: Form(
             key: _formKey,
             child: Column(
@@ -95,6 +103,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -104,6 +113,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     labelText: 'Student ID',
                     prefixIcon: Icon(Icons.person),
                     border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white,
                   ),
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -119,6 +130,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     labelText: 'Student Name',
                     prefixIcon: Icon(Icons.person),
                     border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white,
                   ),
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -134,6 +147,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     labelText: 'Student Mail',
                     prefixIcon: Icon(Icons.email),
                     border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white,
                   ),
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -149,6 +164,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     labelText: 'Password',
                     prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white,
                   ),
                   obscureText: true,
                   validator: (value) {
@@ -165,6 +182,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     labelText: 'Confirm Password',
                     prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white,
                   ),
                   obscureText: true,
                   validator: (value) {
@@ -178,7 +197,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 ElevatedButton(
                   onPressed: _submitForm,
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
+                    primary: Colors.white,
                     padding: const EdgeInsets.symmetric(horizontal: 24.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -189,7 +208,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.blue,
                     ),
                   ),
                 ),
@@ -217,21 +236,27 @@ class _RegistrationPageState extends State<RegistrationPage> {
             icon: Icon(Icons.person_add),
             label: 'Register',
           ),
-         
+          BottomNavigationBarItem(
+            icon: Icon(Icons.login),
+            label: 'Login',
+          ),
         ],
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.white,
+        backgroundColor: Colors.blue,
         currentIndex: 1, // Set the current index of the selected item
         onTap: (index) {
           // Handle item tap here
           if (index == 0) {
             // Navigate to home page
-            Navigator.pushNamed(context, '/');
-          } else if (index == 1) {
-            // Navigate to registration page
-            Navigator.pushNamed(context, '/registration');
-          } else if (index == 2) {
-            // Navigate to student dashboard
-            Navigator.pushNamed(context, '/dashboard');
-          }
+            Navigator.pushNamed(context, '/');  } 
+            else if (index == 1) {
+            Navigator.pushNamed(context, RegistrationPage.routeName);
+          } 
+          else if (index == 2) {
+            Navigator.pushNamed(context, '/login');
+              
+          } 
         },
       ),
     );

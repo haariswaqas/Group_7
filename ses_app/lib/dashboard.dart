@@ -13,7 +13,7 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 5, vsync: this);
+    _tabController = TabController(length: 6, vsync: this); // Increased the length to 6
   }
 
   @override
@@ -34,7 +34,7 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.black,
               ),
               child: Text(
                 'Navigation',
@@ -56,7 +56,7 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
                 Navigator.pushNamed(context, Dashboard.routeName);
               },
             ),
-              ListTile(
+            ListTile(
               title: Text('Sign Out'),
               onTap: () {
                 Navigator.pushNamed(context, '/logout_page');
@@ -74,6 +74,7 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
               Tab(text: 'Assignments'),
               Tab(text: 'Projects'),
               Tab(text: 'Exam Timetable'),
+              Tab(text: 'Results'),
               Tab(text: 'Fees Payment'),
             ],
           ),
@@ -96,7 +97,7 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey),
+                            border: Border.all(color: Colors.black),
                             borderRadius: BorderRadius.circular(8.0),
                             color: Colors.white,
                           ),
@@ -254,8 +255,73 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
+                        'Results/Grades',
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        'CGPA: 3.75', // Replace with the actual CGPA value
+                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(height: 16),
+                      Card(
+                        child: ListTile(
+                          title: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Linear Circuits AM Project'),
+                              Text('Grade: A'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          title: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Data Communications Final Project'),
+                              Text('Grade: B+'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          title: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Software Engineering Project 2 (Flutter)'),
+                              Text('Grade: A-'),
+                              Text('Due: 26th June, 2023'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          title: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Software Engineering Assignment 1'),
+                              Text('Grade: A'),
+                              Text('Due: 22nd June, 2023'),
+                            ],
+                          ),
+                        ),
+                      ),
+                    
+                    ],
+                  ),
+                ),
+                   SingleChildScrollView(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
                         'Fees Payment',
-                        style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 10),
                       DataTable(
