@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'login_page.dart';
 import 'registration_page.dart';
 import 'dashboard.dart';
-import 'profile.dart';
+
 
 class HomePage extends StatefulWidget {
   static const String routeName = '/';
