@@ -36,15 +36,37 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  @override
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        backgroundColor: Colors.blue, // Set the background color to dark red
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context); // Navigate back when the back arrow button is pressed
+          },
+        ),
+        title: const Text(
+          'Login',
+          style: TextStyle(
+            color: Colors.white, // Set the text color to white
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(16.0),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.black, Colors.grey],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
           child: Form(
             key: _formKey,
             child: Column(
@@ -56,6 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -65,6 +88,8 @@ class _LoginPageState extends State<LoginPage> {
                     labelText: 'Email',
                     prefixIcon: Icon(Icons.email),
                     border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white,
                   ),
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -80,6 +105,8 @@ class _LoginPageState extends State<LoginPage> {
                     labelText: 'Password',
                     prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white,
                   ),
                   obscureText: true,
                   validator: (value) {
@@ -93,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   onPressed: _submitForm,
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
+                    primary: Colors.white,
                     padding: const EdgeInsets.symmetric(horizontal: 24.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -104,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.blue,
                     ),
                   ),
                 ),
@@ -116,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Text(
                     'Forgot Password?',
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.white,
                       decoration: TextDecoration.underline,
                     ),
                   ),
@@ -141,7 +168,7 @@ class _LoginPageState extends State<LoginPage> {
             label: 'Login',
           ),
         ],
-       selectedItemColor: Colors.black,
+        selectedItemColor: Colors.black,
         unselectedItemColor: Colors.white,
         backgroundColor: Colors.blue,
         currentIndex: 2, // Set the current index of the selected item
@@ -149,14 +176,12 @@ class _LoginPageState extends State<LoginPage> {
           // Handle item tap here
           if (index == 0) {
             // Navigate to home page
-            Navigator.pushNamed(context, '/');  } 
-            else if (index == 1) {
+            Navigator.pushNamed(context, '/');
+          } else if (index == 1) {
             Navigator.pushNamed(context, '/registration');
-          } 
-          else if (index == 2) {
+          } else if (index == 2) {
             Navigator.pushNamed(context, '/login');
-              
-          } 
+          }
         },
       ),
     );

@@ -73,9 +73,9 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
               Tab(text: 'Profile'),
               Tab(text: 'Assignments'),
               Tab(text: 'Projects'),
-              Tab(text: 'Exam Timetable'),
+              Tab(text: 'Exams'),
               Tab(text: 'Results'),
-              Tab(text: 'Fees Payment'),
+              Tab(text: 'Fees'),
             ],
           ),
           Expanded(
@@ -269,7 +269,7 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
                           title: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Linear Circuits AM Project'),
+                              Text('Linear Circuits'),
                               Text('Grade: A'),
                             ],
                           ),
@@ -280,7 +280,7 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
                           title: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Data Communications Final Project'),
+                              Text('Data Communications'),
                               Text('Grade: B+'),
                             ],
                           ),
@@ -291,25 +291,14 @@ class _DashboardState extends State<Dashboard> with SingleTickerProviderStateMix
                           title: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Software Engineering Project 2 (Flutter)'),
+                              Text('Software Engineering'),
                               Text('Grade: A-'),
                               Text('Due: 26th June, 2023'),
                             ],
                           ),
                         ),
                       ),
-                      Card(
-                        child: ListTile(
-                          title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Software Engineering Assignment 1'),
-                              Text('Grade: A'),
-                              Text('Due: 22nd June, 2023'),
-                            ],
-                          ),
-                        ),
-                      ),
+              
                     
                     ],
                   ),

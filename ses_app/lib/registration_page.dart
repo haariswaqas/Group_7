@@ -76,18 +76,33 @@ class _RegistrationPageState extends State<RegistrationPage> {
     }
   }
 
-  @override
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Registration'),
+        backgroundColor: Colors.blue, // Set the background color to dark red
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context); // Navigate back when the back arrow button is pressed
+          },
+        ),
+        title: const Text(
+          'Registration',
+          style: TextStyle(
+            color: Colors.white, // Set the text color to white
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(16.0),
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.grey, Colors.white],
+              colors: [Colors.black, Colors.grey],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),

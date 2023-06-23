@@ -28,11 +28,26 @@ class _HomePageState extends State<HomePage> {
 
   String? expandedDepartment;
 
-  @override
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        backgroundColor: Colors.blue, // Set the background color to dark red
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context); // Navigate back when the back arrow button is pressed
+          },
+        ),
+        title: const Text(
+          'Home',
+          style: TextStyle(
+            color: Colors.white, // Set the text color to white
+          ),
+        ),
       ),
       body: Container(
         color: Colors.grey[800], // Set the background color to dark grey
@@ -128,6 +143,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.dashboard),
             label: 'Dashboard',
           ),
+          
         ],
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.white,

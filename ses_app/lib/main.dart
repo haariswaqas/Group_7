@@ -6,6 +6,7 @@ import 'dashboard.dart';
 import 'logout_page.dart';
 
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         Dashboard.routeName: (context) => Dashboard(), // Remove 'const' here
         
         LogoutPage.routeName: (context) => LogoutPage(),
+    
       
       },
     );
