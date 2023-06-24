@@ -32,6 +32,47 @@ class Fees extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Fees'),
+         backgroundColor: Colors.blue,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.black,
+              ),
+              child: Text(
+                'Manage Tasks',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              title: Text('Home'),
+              onTap: () {
+                Navigator.pushNamed(context, '/');
+              },
+            ),
+            ListTile(
+              title: Text('Dashboard'),
+              onTap: () {
+                Navigator.pushNamed(context, 'dashboard');
+              },
+            ),
+             
+            ListTile(
+              title: Text('Sign Out'),
+              onTap: () {
+                Navigator.pushNamed(context, '/logout_page');
+              },
+            ),
+             
+           
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),

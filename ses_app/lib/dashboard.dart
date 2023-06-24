@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
-  static const String routeName = '/dashboard';
+  static const String routeName = 'dashboard';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dashboard'),
+        backgroundColor: Colors.blue,
       ),
       drawer: Drawer(
         child: ListView(
@@ -15,7 +16,7 @@ class Dashboard extends StatelessWidget {
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.black,
+                color: Colors.blue,
               ),
               child: Text(
                 'Navigation',
@@ -46,72 +47,70 @@ class Dashboard extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
-            label: 'Assignments',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.folder),
-            label: 'Projects',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.event_note),
-            label: 'Exams',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.grade),
-            label: 'Results',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.payment),
-            label: 'Fees',
-          ),
-        ],
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.black,
-        backgroundColor: Colors.blue,
-         // Set the current index of the selected it
-        onTap: (index) {
-          // Handle item tap here
-          if (index == 0) {
-            // Navigate to profile page
-            Navigator.pushNamed(context, 'profile');
-          } else if (index == 1) {
-            Navigator.pushNamed(context, 'assignments');
-          } else if (index == 2) {
-            Navigator.pushNamed(context, 'projects');
-          } else if (index == 3) {
-            Navigator.pushNamed(context, 'exams');
-          } else if (index == 4) {
-            Navigator.pushNamed(context, 'results');
-          } else if (index == 5) {
-            Navigator.pushNamed(context, 'fees');
-          }
-          
-        },
-      ),
-      body: Center(
-  child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Text(
-        'Welcome to your Dashboard!',
-        style: TextStyle(fontSize: 28),
-      ),
-      Text(
-        'Keep track of all your tasks/activities',
-        style: TextStyle(fontSize: 24),
-      ),
-     
-    ],
-  ),
+   bottomNavigationBar: BottomNavigationBar(
+  backgroundColor: Colors.blue, // Set the background color to blue
+  items: const <BottomNavigationBarItem>[
+    BottomNavigationBarItem(
+      icon: Icon(Icons.account_circle),
+      label: 'Profile',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.assignment),
+      label: 'Assignments',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.folder),
+      label: 'Projects',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.event_note),
+      label: 'Exams',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.grade),
+      label: 'Results',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.payment),
+      label: 'Fees',
+    ),
+  ],
+   selectedItemColor: Colors.black,
+    unselectedItemColor: Colors.black,
+  onTap: (index) {
+    // Handle item tap here
+    if (index == 0) {
+      // Navigate to profile page
+      Navigator.pushNamed(context, 'profile');
+    } else if (index == 1) {
+      Navigator.pushNamed(context, 'assignments');
+    } else if (index == 2) {
+      Navigator.pushNamed(context, 'projects');
+    } else if (index == 3) {
+      Navigator.pushNamed(context, 'exams');
+    } else if (index == 4) {
+      Navigator.pushNamed(context, 'results');
+    } else if (index == 5) {
+      Navigator.pushNamed(context, 'fees');
+    }
+  },
 ),
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Welcome to your Dashboard!',
+              style: TextStyle(fontSize: 28),
+            ),
+            Text(
+              'Keep track of all your tasks/activities',
+              style: TextStyle(fontSize: 24),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
