@@ -10,7 +10,7 @@ import 'projects.dart';
 import 'exams.dart';
 import 'results.dart';
 import 'fees.dart';
-import 'about.dart'; 
+
 
 
 
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         Exams.routeName: (context) => const Exams(),
         Results.routeName: (context) => const Results(),
         Fees.routeName: (context) => const Fees(),
-        About.routeName: (context) => const About(),
+       
         
         LogoutPage.routeName: (context) => LogoutPage(),
     
