@@ -70,15 +70,12 @@ class Results extends StatelessWidget {
                 Navigator.pushNamed(context, 'dashboard');
               },
             ),
-             
             ListTile(
               title: Text('Sign Out'),
               onTap: () {
                 Navigator.pushNamed(context, '/logout_page');
               },
             ),
-             
-           
           ],
         ),
       ),
@@ -89,20 +86,30 @@ class Results extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                 'CGPA: 3.08',
+                'CGPA: 3.08',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: DataTable(
-                  dataRowHeight: 48, // Adjust the row height for mobile screens
+                  dataRowHeight: 56, // Adjust the row height for mobile screens
                   columns: const <DataColumn>[
-                    DataColumn(label: Text('Course Code')),
-                    DataColumn(label: Text('Course Title')),
-                    DataColumn(label: Text('Credit')),
-                    DataColumn(label: Text('Grade')),
-                    DataColumn(label: Text('GPT')),
+                    DataColumn(
+                      label: Text('Course Code'),
+                    ),
+                    DataColumn(
+                      label: Text('Course Title'),
+                    ),
+                    DataColumn(
+                      label: Text('Credit'),
+                    ),
+                    DataColumn(
+                      label: Text('Grade'),
+                    ),
+                    DataColumn(
+                      label: Text('GPT'),
+                    ),
                   ],
                   rows: paymentData.map((payment) {
                     return DataRow(cells: [
@@ -174,6 +181,7 @@ class Results extends StatelessWidget {
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.black,
         backgroundColor: Colors.blue,
+        showUnselectedLabels: true, // Show labels for unselected items
         currentIndex: 4, // Set the current index of the selected item
         onTap: (index) {
           // Handle item tap here

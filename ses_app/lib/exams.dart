@@ -112,6 +112,7 @@ class Exams extends StatelessWidget {
   ],
  selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.black,
+         showUnselectedLabels: true, // Show labels for unselected items
         backgroundColor: Colors.blue,
         currentIndex: 3, // Set the current index of the selected item
         onTap: (index) {

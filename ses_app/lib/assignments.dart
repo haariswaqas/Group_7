@@ -140,6 +140,7 @@ class _AssignmentsState extends State<Assignments> {
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.black,
         backgroundColor: Colors.blue,
+         showUnselectedLabels: true, // Show labels for unselected items
         currentIndex: 1, // Set the current index of the selected item
         onTap: (index) {
           // Handle item tap here

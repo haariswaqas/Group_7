@@ -116,6 +116,7 @@ class Projects extends StatelessWidget {
   ],
  selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.black,
+         showUnselectedLabels: true, // Show labels for unselected items
       
         currentIndex: 2, // Set the current index of the selected item
         onTap: (index) {
