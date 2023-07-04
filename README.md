@@ -17,7 +17,7 @@
 ### INTRODUCTION
 The flutter app is a mobile application that provides features for user registration, login, and a dashboard for managing student information and tasks such as fees payment, assignments, projects, etc. The app utilizes various modules, libraries, and dart pages to implement these functionalities.
 
-PROJECT STRUCTURE
+### PROJECT STRUCTURE
 •	The project is a mobile app developed using the Flutter framework.
 •	The app provides features for user registration, login, and a dashboard for managing student information and tasks.
 •	The project consists of several pages, including Homepage, Registration Page, Login Page, Dashboard Page, Student Profile Page, Assignments Page, Projects Page, Exams Page, Results Page, and Fees Payment Page.
@@ -33,11 +33,11 @@ PROJECT STRUCTURE
 •	The Results Page displays the CGPA and a table of course results.
 •	The Fees Payment Page displays a table of payment data, including the date, description, and amount of each payment.
 
-MAIN TECHNOLOGIES USED IN BUILDING THE SES MOBILE APPLICATION
+### MAIN TECHNOLOGIES USED IN BUILDING THE SES MOBILE APPLICATION
 •	Flutter is a UI framework for building native mobile applications. It was used as the main technology for developing the mobile app.
 •	Dart is a programming language used with Flutter to write the app's logic and implement functionalities.
 
-FLUTTER CLASSES & WIDGETS 
+### FLUTTER CLASSES & WIDGETS 
 •	StatefulWidget is a Flutter class used for building components that can change their state over time.
 •	MaterialApp is a Flutter class that provides a default app structure and layout, including navigation and theming.
 •	ExpansionTile is a Flutter widget used to display collapsible content, such as the descriptions of engineering departments.
@@ -53,7 +53,7 @@ FLUTTER CLASSES & WIDGETS
 •	ListTile is a Flutter widget used to display a single item in a list, as seen in the projects, exams, and results pages.
 •	DataTable is a Flutter widget used to display tabular data, as seen in the results and fees pages.
 
-HOMEPAGE
+### HOMEPAGE
 The HomePage component is a StatefulWidget that represents the home page of the application. It provides an overview of the School of Engineering Sciences and allows users to explore different engineering departments. Here's an overview of the key features and implementation details:
 •	The app bar displays the title "Home" and a back button that allows users to navigate back to the previous screen.
 •	The body of the page is divided into sections with relevant information about the school and its programs.
@@ -63,13 +63,13 @@ The HomePage component is a StatefulWidget that represents the home page of the 
 
 
  
-REGISTRATION PAGE
+### REGISTRATION PAGE
 The registration page consists of a form where students can enter their student ID, name, UG student mail, password, and confirm password. The form includes input validation to ensure that all required fields are filled out correctly and that the passwords match.
 Upon successful registration, the user is navigated to the login page. The bottom navigation bar at the bottom of the screen provides links to the home page, registration page (current page), and login page.
 The page's design features a gradient background and an app bar with a dark blue color. The form inputs are styled with white background colors and appropriate icons. Error messages are displayed below the form if any validation errors occur.
 Overall, the registration page aims to provide a user-friendly and secure way for students to create an account within the School of Engineering Sciences system.
 
-LOGIN PAGE
+### LOGIN PAGE
 This page allows students to log in to their accounts within the School of Engineering Sciences system.
 The Login Page is similar in design to the Registration Page. It consists of an app bar at the top with a dark blue background, a back button to navigate back, and a title displaying "Login". The body of the page includes a gradient background and a form for users to enter their email and password.
 The form uses the TextEditingController class to control the input fields and the GlobalKey<FormState> to validate and manage the form state. The email and password fields are styled with white backgrounds and appropriate icons.
@@ -79,7 +79,7 @@ The bottom navigation bar at the bottom of the screen provides links to the home
 In summary, the LoginPage serves as an interface for students to enter their login credentials and access their accounts within the School of Engineering Sciences system.
   
 
-DASHBOARD PAGE
+### DASHBOARD PAGE
 The Dashboard page serves as the main interface for students to access various features and functionalities within the School of Engineering Sciences system.
 The Dashboard class extends StatelessWidget and defines the layout and structure of the dashboard page. It includes an app bar with a transparent background and a title displaying "Dashboard". The app bar is wrapped in a PreferredSize widget to specify the preferred height of the app bar.
 The drawer on the left side of the screen provides navigation options for the user. It includes a DrawerHeader with a black background and the text "Manage Tasks" in white. Below the header, there are three ListTiles: "Home", "Dashboard" (selected), and "Sign Out". Tapping on these options navigates the user to the corresponding pages using the Navigator.pushNamed method.
@@ -88,7 +88,7 @@ The body of the page is centered and contains two Text widgets displaying welcom
 In summary, the Dashboard page provides a centralized interface for students to access and manage various tasks, activities, and information within the School of Engineering Sciences system. The page includes an app bar, a drawer for navigation, a bottom navigation bar for section selection, and a centered body displaying welcome messages.
 
   
-STUDENT PROFILE PAGE
+### STUDENT PROFILE PAGE
 The Profile page displays the student's profile information and allows them to view and edit their personal details.
 The Profile class extends StatelessWidget and defines the layout and structure of the profile page. It includes an app bar with a title "Student Profile" and a blue background.
 The drawer on the left side of the screen provides navigation options for the user. It includes a DrawerHeader with a black background and the text "Manage Tasks" in white. Below the header, there are three ListTiles: "Home", "Dashboard", and "Sign Out". Tapping on these options navigates the user to the corresponding pages using the Navigator.pushNamed method.
@@ -99,7 +99,7 @@ The Profile page provides a view of the student's profile information, including
  
 
 
-ASSIGNMENTS PAGE
+### ASSIGNMENTS PAGE
 The Assignments page displays a list of upcoming assignments and allows the user to mark them as completed using checkboxes.
 The Assignments class extends StatefulWidget and defines the layout and behavior of the assignments page. It includes an app bar with a title "Assignments" and a blue background.
 The drawer on the left side of the screen provides navigation options for the user. It includes a DrawerHeader with a black background and the text "Manage Tasks" in white. Below the header, there are three ListTiles: "Home", "Dashboard", and "Sign Out". Tapping on these options navigates the user to the corresponding pages using the Navigator.pushNamed method.
@@ -108,7 +108,7 @@ Below the text, there are three Card widgets representing the upcoming assignmen
 The bottom navigation bar at the bottom of the screen allows the user to navigate between different sections of the dashboard. It includes six BottomNavigationBarItems: "Profile", "Assignments" (selected), "Projects", "Exams", "Results", and "Fees". Each item is represented by an icon and a label. Tapping on these items navigates the user to the respective pages using the Navigator.pushNamed method.
 The Assignments page displays a list of upcoming assignments with checkboxes to mark them as completed. It also includes navigation options in the app bar and drawer, allowing the user to switch between different sections of the dashboard.
 
- PROJECTS PAGE
+### PROJECTS PAGE
 The Projects page displays a list of upcoming projects.
 The Projects class extends StatelessWidget and defines the layout and behavior of the projects page. It includes an app bar with a title "Projects" and a blue background.
 The drawer on the left side of the screen provides navigation options for the user, similar to the previous pages. It includes a DrawerHeader with a black background and the text "Manage Tasks" in white. Below the header, there are three ListTiles: "Home", "Dashboard", and "Sign Out". Tapping on these options navigates the user to the corresponding pages using the Navigator.pushNamed method.
@@ -118,7 +118,7 @@ The bottom navigation bar at the bottom of the screen is similar to the previous
 In summary, the Projects page displays a list of upcoming projects. It includes navigation options in the app bar and drawer and a bottom navigation bar to switch between different sections of the dashboard.
 
  
-EXAMS PAGE
+### EXAMS PAGE
 The Exams page displays an exam timetable with the dates of upcoming exams.
 The Exams class extends StatelessWidget and defines the layout and behavior of the exams page. It includes an app bar with the title "Exam Timetable" and a blue background.
 The drawer on the left side of the screen provides navigation options for the user, similar to the previous pages. It includes a DrawerHeader with a black background and the text "Manage Tasks" in white. Below the header, there are three ListTiles: "Home", "Dashboard", and "Sign Out". Tapping on these options navigates the user to the corresponding pages using the Navigator.pushNamed method.
@@ -128,7 +128,7 @@ The bottom navigation bar at the bottom of the screen is similar to the previous
 In summary, the Exams page displays an exam timetable with the dates of upcoming exams. It includes navigation options in the app bar and drawer and a bottom navigation bar to switch between different sections of the dashboard.
 
  
-RESULTS PAGE
+### RESULTS PAGE
 The Results page displays the CGPA (Cumulative Grade Point Average) and a table of course results.
 The Results class extends StatelessWidget and defines the layout and behavior of the Results page. It includes an app bar with a title "Results" and a blue background.
 The drawer on the left side of the screen provides navigation options for the user, similar to the previous pages. It includes a DrawerHeader with a black background and the text "Manage Tasks" in white. Below the header, there are three ListTiles: "Home", "Dashboard", and "Sign Out". Tapping on these options navigates the user to the corresponding pages using the Navigator.pushNamed method.
@@ -137,7 +137,7 @@ Below the text, there is a SingleChildScrollView with a horizontal scroll direct
 The bottom navigation bar at the bottom of the screen is similar to the previous pages. It allows the user to navigate between different sections of the dashboard. It includes six BottomNavigationBarItems: "Profile", "Assignments", "Projects", "Exams", "Results" (selected), and "Fees". Each item is represented by an icon and a label. Tapping on these items navigates the user to the respective pages using the Navigator.pushNamed method.
 In summary, the Results page displays the CGPA and a table of course results. It includes navigation options in the app bar and drawer and a bottom navigation bar to switch between different sections of the dashboard.
  
-FEES PAYMENT PAGE
+### FEES PAYMENT PAGE
 The Fees page displays a table of payment data, including the date, description, and amount of each payment.
 The Fees class extends StatelessWidget and defines the layout and behavior of the Fees page. It includes an app bar with a title "Fees" and a blue background.
 The drawer on the left side of the screen provides navigation options for the user, similar to the previous pages. It includes a DrawerHeader with a black background and the text "Manage Tasks" in white. Below the header, there are three ListTiles: "Home", "Dashboard", and "Sign Out". Tapping on these options navigates the user to the corresponding pages using the Navigator.pushNamed method.
@@ -147,7 +147,7 @@ The bottom navigation bar at the bottom of the screen is similar to the previous
 In summary, the Fees page displays a table of payment data, including the date, description, and amount of each payment. It includes navigation options in the app bar and drawer and a bottom navigation bar to switch between different sections of the dashboard.
  
 
-LOGOUT PAGE
+### LOGOUT PAGE
 The LogoutPage is displayed when the user successfully logs out of the application.
 The LogoutPage class extends StatelessWidget and defines the layout and behavior of the LogoutPage. It includes an app bar with a title "Logout".
 The body of the page consists of a Center widget wrapped in a Column. Inside the column, there is an Icon widget displaying a green checkmark icon (Icons.check_circle) with a size of 80.
