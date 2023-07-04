@@ -3,30 +3,18 @@
 # MOBILE APPLICATION FOR SCHOOL OF ENGINEERING SCIENCES - UG
 
  
-UNIVERSITY OF GHANA
-(All rights reserved)
-COLLEGE OF BASIC AND APPLIED SCIENCES
-SCHOOL OF ENGINEERING SCIENCEES
-DEPARTMENT OF COMPUTER ENGINEERING
-SECOND SEMESTER 2022/2023 ACADEMIC YEAR
 
-Course Code & Title: CPEN 208 – Software Engineering
-Course Instructor: Dr. John Korankye Assiamah
-Teaching Assistant: Mr. Benjamin Sasu
-Project: 2 
 
-Dillan Ekow Hamah Hammond -	10952785
-Adu-Gyamfi Michael Kwabena -	10980219
-Waqas Haaris Ali -	10947015
-Bernice Animwaa Boateng -	10980324
-Enyima-Quansah Enoch -	10988268
-Benneh Mensah Kwame Prince -	10976056
-Kuayi Rapheal -	10970285
+## Dillan Ekow Hamah Hammond -	10952785
+## Adu-Gyamfi Michael Kwabena -	10980219
+## Waqas Haaris Ali -	10947015
+## Bernice Animwaa Boateng -	10980324
+## Enyima-Quansah Enoch -	10988268
+## Benneh Mensah Kwame Prince -	10976056
+## Kuayi Rapheal -	10970285
 
-PROJECT 2 REPORT
-MOBILE APPLICATION FOR SCHOOL OF ENGINEERING SCIENCES - UG
 
-INTRODUCTION
+### INTRODUCTION
 The flutter app is a mobile application that provides features for user registration, login, and a dashboard for managing student information and tasks such as fees payment, assignments, projects, etc. The app utilizes various modules, libraries, and dart pages to implement these functionalities.
 
 PROJECT STRUCTURE
